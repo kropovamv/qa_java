@@ -3,10 +3,11 @@ package com.example;
 import java.util.Arrays;
 import java.util.List;
 
-public class AlexLion extends Lion{
+public class AlexLion extends Lion {
+
     public AlexLion() throws Exception {
-        // Передаём "Самец" в конструктор родительского класса Lion
-        super("Самец");
+        // Передаём "Самец" и новый экземпляр Feline
+        super("Самец", new Feline());
     }
 
     public List<String> getFriends() {
