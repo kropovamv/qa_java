@@ -22,14 +22,14 @@ class CatTest {
     }
 
     @Test
-    void getFoodShouldReturnWhatPredatorEats() throws Exception {
+    void getFoodShouldReturnPredatorEats() throws Exception {
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(mockFeline.eatMeat()).thenReturn(expectedFood);
 
         Cat cat = new Cat(mockFeline);
         assertEquals(expectedFood, cat.getFood());
 
-        Mockito.verify(mockFeline, Mockito.times(1)).eatMeat();
+        Mockito.verify(mockFeline).eatMeat();
     }
 
     @Test

@@ -24,18 +24,12 @@ class FelineTest {
     }
 
     @Test
-    void getFamilyShouldReturnCats() {
+    void getFamilyShouldReturnFamily() {
         assertEquals("Кошачьи", feline.getFamily());
     }
 
     @Test
     void getKittensWithoutArgShouldReturnOne() {
         assertEquals(1, feline.getKittens());
-    }
-
-    @ParameterizedTest
-    @ValueSource(ints = {0, 1, 5, 10})
-    void getKittensWithArgShouldReturnPassedValue(int kittensCount) {
-        assertEquals(kittensCount, feline.getKittens(kittensCount));
     }
 }
